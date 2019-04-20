@@ -1,0 +1,3 @@
+rootProject.name = 'udemy_react_native_tutorial'
+
+include ':app'
