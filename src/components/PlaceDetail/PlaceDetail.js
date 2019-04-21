@@ -27,7 +27,11 @@ const placeDetail = props => {
               <Icon name="ios-trash" size={30} color="red"/>          
             </View>
           </TouchableOpacity>
-          <Button title="Close" onPress={props.onModalClosed} />
+          <TouchableOpacity onPress={props.onModalClosed}>
+            <View style={styles.closeItems}>
+              <Icon name="ios-close-circle" size={30} color="blue"/>          
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </Modal>
@@ -48,6 +52,9 @@ const styles = StyleSheet.create({
     fontSize: 28
   },
   deleteItems: {
+    alignItems: "center"
+  },
+  closeItems: {
     alignItems: "center"
   }
 });
