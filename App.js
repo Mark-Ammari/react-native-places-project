@@ -11,14 +11,14 @@ import configureStore from './src/store/configureStore'
 
 const store = configureStore()
 
-
-// Register Screens
+// Register Screens (different types of screens with a unique id, a store, a provider)
 Navigation.registerComponent("awesome-places.AuthScreen", () => AuthScreen, store, Provider);
 Navigation.registerComponent("awesome-places.SharePlacesScreen", () => SharePlacesScreen, store, Provider)
 Navigation.registerComponent("awesome-places.FindPlaceScreen", () => FindPlaceScreen, store, Provider)
 Navigation.registerComponent("awesome-places.PlaceDetailScreen", () => PlaceDetailScreen, store, Provider)
 Navigation.registerComponent("awesome-places.SideDrawerScreen", () => SideDrawerScreen)
-// Start a App
+
+// Start a App (with login screen)
 Navigation.startSingleScreenApp({
   screen: {
     screen: "awesome-places.AuthScreen",
