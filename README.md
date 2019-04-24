@@ -9,3 +9,4 @@
 - Styling Components
 - Debugging
 - Look into NativeBase.io
+- Animations
