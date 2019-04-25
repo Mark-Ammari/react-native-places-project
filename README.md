@@ -10,3 +10,5 @@
 - Debugging
 - Look into NativeBase.io
 - Animations
+- Validitity
+- Handle User Input

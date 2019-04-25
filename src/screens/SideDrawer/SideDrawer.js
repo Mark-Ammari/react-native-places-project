@@ -1,34 +1,54 @@
-import React, { Component } from 'react'
-import { View, Text, Platform, TouchableOpacity, StyleSheet } from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons'
-class SideDrawer extends Component {
-    render () {
+import React, { Component } from "react";
+import {
+  View,
+  Text,
+  Dimensions,
+  StyleSheet,
+  TouchableOpacity,
+  Platform
+} from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
-        return (
-            <View style={styles.container}>
-                <TouchableOpacity>
-                    <View style={styles.drawerItem}>
-                        <Icon style={{marginRight: 10}} name={Platform.OS === "android" ? "md-log-out" : "ios-log-out"} size={30}/>
-                        <Text>Sign Out</Text>
-                    </View>
-                </TouchableOpacity>
-            </View>
-        )
-    }
+class SideDrawer extends Component {
+  render() {
+    return (
+      <View
+        style={[
+          styles.container,
+          { width: Dimensions.get("window").width * 0.8 }
+        ]}
+      >
+        <TouchableOpacity>
+          <View style={styles.drawerItem}>
+            <Icon
+              name={Platform.OS === "android" ? "md-log-out" : "ios-log-out"}
+              size={30}
+              color="#aaa"
+              style={styles.drawerItemIcon}
+            />
+            <Text>Sign Out</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        paddingTop: 30,
-        backgroundColor: "white",
-        flex: 1
-    },
-    drawerItem: {
-        flexDirection: "row",
-        alignItems: "center",
-        padding: 10,
-        backgroundColor: '#eee'
-    }
-})
+  container: {
+    paddingTop: 50,
+    backgroundColor: "white",
+    flex: 1
+  },
+  drawerItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 10,
+    backgroundColor: "#eee"
+  },
+  drawerItemIcon: {
+    marginRight: 10
+  }
+});
 
-export default SideDrawer
+export default SideDrawer;

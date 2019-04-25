@@ -1,90 +1,115 @@
 import React, { Component } from "react";
-import { Dimensions, Platform, View, Image, Text, Button, StyleSheet, TouchableOpacity } from "react-native";
-import Icon from 'react-native-vector-icons/Ionicons'
-import { connect } from 'react-redux'
-import { deletePlace } from '../../store/actions/index'
+import {
+  View,
+  Image,
+  Text,
+  Button,
+  StyleSheet,
+  TouchableOpacity,
+  Platform,
+  Dimensions
+} from "react-native";
+import { connect } from "react-redux";
+
+import Icon from "react-native-vector-icons/Ionicons";
+import { deletePlace } from "../../store/actions/index";
 
 class PlaceDetail extends Component {
   state = {
-    viewMode: Dimensions.get('window').height > 500 ? "portrait" : "lanscape"
-  }
+    viewMode: "portrait"
+  };
 
   constructor(props) {
-    super(props)
-    Dimensions.addEventListener("change", this.styleUpdate)
+    super(props);
+    Dimensions.addEventListener("change", this.updateStyles);
   }
 
   componentWillUnmount() {
-    Dimensions.removeEventListener("change", this.styleUpdate)
+    Dimensions.removeEventListener("change", this.updateStyles);
   }
 
-  styleUpdate = () => {
+  updateStyles = dims => {
     this.setState({
-      viewMode: Dimensions.get('window').height > 500 ? "portrait" : "lanscape"
-    })
-  }
+      viewMode: dims.window.height > 500 ? "portrait" : "landscape"
+    });
+  };
 
-  placeDeleteHandler = () => {
-    this.props.onDeletePlace(this.props.selectedPlace.key)
-    this.props.navigator.pop()
-  }
+  placeDeletedHandler = () => {
+    this.props.onDeletePlace(this.props.selectedPlace.key);
+    this.props.navigator.pop();
+  };
 
-  render () {
+  render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.placeImageTextContainer}>
-          <Image source={this.props.selectedPlace.image} style={this.state.viewMode === "portrait" ? styles.portraitPlaceImage : styles.landscapePlaceImage} />
-          <Text style={this.state.viewMode === "portrait" ? styles.portraitPlaceName : styles.landscapePlaceName}>{this.props.selectedPlace.name}</Text>
+      <View
+        style={[
+          styles.container,
+          this.state.viewMode === "portrait"
+            ? styles.portraitContainer
+            : styles.landscapeContainer
+        ]}
+      >
+        <View style={styles.subContainer}>
+          <Image
+            source={this.props.selectedPlace.image}
+            style={styles.placeImage}
+          />
         </View>
-        <View>
-          <TouchableOpacity onPress={this.placeDeleteHandler}>
-            <View style={styles.deleteItems}>
-              <Icon name={Platform.OS === "android" ? "md-trash" : "ios-trash"} size={30} color="red" />
-            </View>
-          </TouchableOpacity>
+        <View style={styles.subContainer}>
+          <View>
+            <Text style={styles.placeName}>
+              {this.props.selectedPlace.name}
+            </Text>
+          </View>
+          <View>
+            <TouchableOpacity onPress={this.placeDeletedHandler}>
+              <View style={styles.deleteButton}>
+                <Icon
+                  size={30}
+                  name={Platform.OS === "android" ? "md-trash" : "ios-trash"}
+                  color="red"
+                />
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     );
   }
-};
+}
 
 const styles = StyleSheet.create({
   container: {
-    margin: 22
+    margin: 22,
+    flex: 1
   },
-  placeImageTextContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%"
+  portraitContainer: {
+    flexDirection: "column"
   },
-  portraitPlaceImage: {
+  landscapeContainer: {
+    flexDirection: "row"
+  },
+  placeImage: {
     width: "100%",
     height: 200
   },
-  portraitPlaceName: {
+  placeName: {
     fontWeight: "bold",
     textAlign: "center",
     fontSize: 28
   },
-  landscapePlaceImage: {
-    width: "50%",
-    height: 150,
+  deleteButton: {
     alignItems: "center"
   },
-  landscapePlaceName: {
-    fontWeight: "bold",
-    textAlign: "center",
-    fontSize: 28
-  },
-  deleteItems: {
-    alignItems: "center"
-  },
+  subContainer: {
+    flex: 1
+  }
 });
 
 const mapDispatchToProps = dispatch => {
   return {
-    onDeletePlace: (key) => dispatch(deletePlace(key))
-  }
-}
+    onDeletePlace: key => dispatch(deletePlace(key))
+  };
+};
 
 export default connect(null, mapDispatchToProps)(PlaceDetail);

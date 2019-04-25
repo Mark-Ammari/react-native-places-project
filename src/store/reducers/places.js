@@ -1,6 +1,6 @@
 import {
   ADD_PLACE,
-  DELETE_PLACE,
+  DELETE_PLACE
 } from "../actions/actionTypes";
 
 const initialState = {
