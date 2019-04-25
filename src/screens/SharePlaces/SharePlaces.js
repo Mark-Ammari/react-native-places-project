@@ -12,14 +12,24 @@ import { connect } from 'react-redux'
 import { addPlace } from '../../store/actions/index'
 import MainText from '../../components/UI/MainText/MainText'
 import HeadingText from '../../components/UI/HeadingText/HeadingText'
-
+import valiate from '../../utility/validation'
 class SharedPlacesScreen extends Component {
     static navigatorStyle = {
         navBarButtonColor: "orange"
     }
 
     state = {
-        placeName: ""
+        controls: {
+            placeName: {
+                value: "",
+                valid: false,
+                touched: false,
+                validationRules: {
+                    notEmpty: true
+                }
+            }
+        }
+
     }
 
     constructor(props) {
@@ -38,14 +48,24 @@ class SharedPlacesScreen extends Component {
     }
 
     placeNameChangedHandler = (val) => {
-        this.setState({
-            placeName: val
+        this.setState(prevState => {
+            return {
+                controls: {
+                    ...prevState.controls,
+                    placeName: {
+                        ...prevState.controls.placeName,
+                        value: val,
+                        valid: valiate(val, prevState.controls.placeName.validationRules),
+                        touched: true
+                    }
+                }
+            }
         })
     }
 
     placeAddedhandler = () => {
-        if (this.state.placeName.trim() !== "") {
-            this.props.onAddPlace(this.state.placeName)
+        if (this.state.controls.placeName.value.trim() !== "") {
+            this.props.onAddPlace(this.state.controls.placeName.value)
         }
     }
 
@@ -57,11 +77,17 @@ class SharedPlacesScreen extends Component {
                 <PickImage />
                 <PickLocation />
                 <PlaceInput 
-                placeName={this.state.placeName}
+                placeData={this.state.controls.placeName}
                 onChangeText={this.placeNameChangedHandler}/>
+
                 <View style={styles.Button}>
-                    <Button title="Share The Place" onPress={this.placeAddedhandler}/>
+                    <Button 
+                    title="Share The Place" 
+                    onPress={this.placeAddedhandler}
+                    disabled={!this.state.controls.placeName.valid}
+                    />
                 </View>
+
                 </View>
             </ScrollView>
         )
