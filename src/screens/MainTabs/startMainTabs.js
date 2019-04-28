@@ -26,7 +26,7 @@ const startTabs = () => {
                     }
                 },
                 {
-                    screen: "awesome-places.SharePlaceScreen",
+                    screen: "awesome-places.SharePlacesScreen",
                     label: "Share Place",
                     title: "Share Place",
                     icon: sources[1],
@@ -46,7 +46,7 @@ const startTabs = () => {
             },
             drawer: {
                 left: {
-                    screen: "awesome-places.SideDrawer"
+                    screen: "awesome-places.SideDrawerScreen"
                 }
             },
             appStyle: {
