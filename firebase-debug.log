@@ -1,0 +1,50 @@
+[debug] [2019-04-30T18:31:20.402Z] ----------------------------------------------------------------------
+[debug] [2019-04-30T18:31:20.404Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-04-30T18:31:20.404Z] CLI Version:   6.7.1
+[debug] [2019-04-30T18:31:20.404Z] Platform:      win32
+[debug] [2019-04-30T18:31:20.404Z] Node Version:  v10.15.3
+[debug] [2019-04-30T18:31:20.406Z] Time:          Tue Apr 30 2019 14:31:20 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-04-30T18:31:20.407Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-30T18:31:20.425Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-30T18:31:20.426Z] > authorizing via signed-in user
+[debug] [2019-04-30T18:31:20.426Z] [iam] checking project awesome-places-238720 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2019-04-30T18:31:20.428Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/awesome-places-238720:testIamPermissions  
+
+[debug] [2019-04-30T18:31:20.720Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-30T18:31:20.813Z] SyntaxError: Unexpected token A in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Socket.<anonymous> (C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:24:31)
+    at Socket.emit (events.js:189:13)
+    at Socket.EventEmitter.emit (domain.js:441:20)
+    at addChunk (_stream_readable.js:284:12)
+    at readableAddChunk (_stream_readable.js:265:11)
+    at Socket.Readable.push (_stream_readable.js:220:10)
+    at Pipe.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-04-30T18:33:00.793Z] ----------------------------------------------------------------------
+[debug] [2019-04-30T18:33:00.796Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-04-30T18:33:00.796Z] CLI Version:   6.7.2
+[debug] [2019-04-30T18:33:00.796Z] Platform:      win32
+[debug] [2019-04-30T18:33:00.796Z] Node Version:  v10.15.3
+[debug] [2019-04-30T18:33:00.798Z] Time:          Tue Apr 30 2019 14:33:00 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-04-30T18:33:00.798Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-30T18:33:00.813Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-30T18:33:00.813Z] > authorizing via signed-in user
+[debug] [2019-04-30T18:33:00.813Z] [iam] checking project awesome-places-238720 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2019-04-30T18:33:00.815Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/awesome-places-238720:testIamPermissions  
+
+[debug] [2019-04-30T18:33:01.088Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-30T18:33:01.149Z] SyntaxError: Unexpected token A in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Socket.<anonymous> (C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:24:31)
+    at Socket.emit (events.js:189:13)
+    at Socket.EventEmitter.emit (domain.js:441:20)
+    at addChunk (_stream_readable.js:284:12)
+    at readableAddChunk (_stream_readable.js:265:11)
+    at Socket.Readable.push (_stream_readable.js:220:10)
+    at Pipe.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+[error] 
+[error] Error: An unexpected error has occurred.
