@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "babel-preset-react-native": "4",
-    "jest-expo": "^22.0.0",
+    "jest-expo": "^32.0.0",
     "react-test-renderer": "16.0.0-beta.5"
   },
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "react": "16.0.0-beta.5",
-    "react-native": "^0.55.4",
+    "react-native": "^0.59.6",
     "react-native-image-picker": "^0.28.1",
     "react-native-maps": "^0.24.2",
     "react-native-navigation": "^1.1.493",

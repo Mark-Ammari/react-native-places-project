@@ -1,20 +1,24 @@
-[debug] [2019-04-30T18:31:20.402Z] ----------------------------------------------------------------------
-[debug] [2019-04-30T18:31:20.404Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2019-04-30T18:31:20.404Z] CLI Version:   6.7.1
-[debug] [2019-04-30T18:31:20.404Z] Platform:      win32
-[debug] [2019-04-30T18:31:20.404Z] Node Version:  v10.15.3
-[debug] [2019-04-30T18:31:20.406Z] Time:          Tue Apr 30 2019 14:31:20 GMT-0400 (Eastern Daylight Time)
-[debug] [2019-04-30T18:31:20.407Z] ----------------------------------------------------------------------
+[debug] [2019-05-02T16:32:35.079Z] ----------------------------------------------------------------------
+[debug] [2019-05-02T16:32:35.081Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2019-05-02T16:32:35.081Z] CLI Version:   5.1.1
+[debug] [2019-05-02T16:32:35.081Z] Platform:      win32
+[debug] [2019-05-02T16:32:35.081Z] Node Version:  v10.15.3
+[debug] [2019-05-02T16:32:35.084Z] Time:          Thu May 02 2019 12:32:35 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-05-02T16:32:35.084Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-04-30T18:31:20.425Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-04-30T18:31:20.426Z] > authorizing via signed-in user
-[debug] [2019-04-30T18:31:20.426Z] [iam] checking project awesome-places-238720 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
-[debug] [2019-04-30T18:31:20.428Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/awesome-places-238720:testIamPermissions  
+[debug] [2019-05-02T16:32:35.095Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-02T16:32:35.095Z] > authorizing via signed-in user
+[debug] [2019-05-02T16:32:35.096Z] [iam] checking project awesome-places-238720 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2019-05-02T16:32:35.098Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-05-02T16:32:35.098Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-05-02T16:32:35.273Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-02T16:32:35.393Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/awesome-places-238720:testIamPermissions  
 
-[debug] [2019-04-30T18:31:20.720Z] <<< HTTP RESPONSE 200
-[debug] [2019-04-30T18:31:20.813Z] SyntaxError: Unexpected token A in JSON at position 0
+[debug] [2019-05-02T16:32:35.668Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-02T16:32:35.740Z] SyntaxError: Unexpected token A in JSON at position 0
     at JSON.parse (<anonymous>)
-    at Socket.<anonymous> (C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:24:31)
+    at Socket.<anonymous> (C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:30:23)
     at Socket.emit (events.js:189:13)
     at Socket.EventEmitter.emit (domain.js:441:20)
     at addChunk (_stream_readable.js:284:12)
@@ -23,23 +27,98 @@
     at Pipe.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
 [error] 
 [error] Error: An unexpected error has occurred.
-[debug] [2019-04-30T18:33:00.793Z] ----------------------------------------------------------------------
-[debug] [2019-04-30T18:33:00.796Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2019-04-30T18:33:00.796Z] CLI Version:   6.7.2
-[debug] [2019-04-30T18:33:00.796Z] Platform:      win32
-[debug] [2019-04-30T18:33:00.796Z] Node Version:  v10.15.3
-[debug] [2019-04-30T18:33:00.798Z] Time:          Tue Apr 30 2019 14:33:00 GMT-0400 (Eastern Daylight Time)
-[debug] [2019-04-30T18:33:00.798Z] ----------------------------------------------------------------------
+[debug] [2019-05-02T16:36:24.806Z] ----------------------------------------------------------------------
+[debug] [2019-05-02T16:36:24.809Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2019-05-02T16:36:24.809Z] CLI Version:   5.1.1
+[debug] [2019-05-02T16:36:24.809Z] Platform:      win32
+[debug] [2019-05-02T16:36:24.809Z] Node Version:  v10.15.3
+[debug] [2019-05-02T16:36:24.811Z] Time:          Thu May 02 2019 12:36:24 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-05-02T16:36:24.811Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-04-30T18:33:00.813Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-04-30T18:33:00.813Z] > authorizing via signed-in user
-[debug] [2019-04-30T18:33:00.813Z] [iam] checking project awesome-places-238720 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
-[debug] [2019-04-30T18:33:00.815Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/awesome-places-238720:testIamPermissions  
+[debug] [2019-05-02T16:36:24.823Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-02T16:36:24.823Z] > authorizing via signed-in user
+[debug] [2019-05-02T16:36:24.823Z] [iam] checking project awesome-places-238720 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2019-05-02T16:36:24.825Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/awesome-places-238720:testIamPermissions  
 
-[debug] [2019-04-30T18:33:01.088Z] <<< HTTP RESPONSE 200
-[debug] [2019-04-30T18:33:01.149Z] SyntaxError: Unexpected token A in JSON at position 0
+[debug] [2019-05-02T16:36:25.122Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-02T16:36:25.179Z] SyntaxError: Unexpected token A in JSON at position 0
     at JSON.parse (<anonymous>)
-    at Socket.<anonymous> (C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:24:31)
+    at Socket.<anonymous> (C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:30:23)
+    at Socket.emit (events.js:189:13)
+    at Socket.EventEmitter.emit (domain.js:441:20)
+    at addChunk (_stream_readable.js:284:12)
+    at readableAddChunk (_stream_readable.js:265:11)
+    at Socket.Readable.push (_stream_readable.js:220:10)
+    at Pipe.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-05-02T16:38:06.775Z] ----------------------------------------------------------------------
+[debug] [2019-05-02T16:38:06.778Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2019-05-02T16:38:06.779Z] CLI Version:   5.1.1
+[debug] [2019-05-02T16:38:06.779Z] Platform:      win32
+[debug] [2019-05-02T16:38:06.779Z] Node Version:  v10.15.3
+[debug] [2019-05-02T16:38:06.781Z] Time:          Thu May 02 2019 12:38:06 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-05-02T16:38:06.781Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-02T16:38:06.793Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-02T16:38:06.793Z] > authorizing via signed-in user
+[debug] [2019-05-02T16:38:06.794Z] [iam] checking project awesome-places-238720 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2019-05-02T16:38:06.795Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/awesome-places-238720:testIamPermissions  
+
+[debug] [2019-05-02T16:38:07.088Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-02T16:38:07.142Z] SyntaxError: Unexpected token A in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Socket.<anonymous> (C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:30:23)
+    at Socket.emit (events.js:189:13)
+    at Socket.EventEmitter.emit (domain.js:441:20)
+    at addChunk (_stream_readable.js:284:12)
+    at readableAddChunk (_stream_readable.js:265:11)
+    at Socket.Readable.push (_stream_readable.js:220:10)
+    at Pipe.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-05-02T16:40:42.971Z] ----------------------------------------------------------------------
+[debug] [2019-05-02T16:40:42.974Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2019-05-02T16:40:42.975Z] CLI Version:   5.1.1
+[debug] [2019-05-02T16:40:42.975Z] Platform:      win32
+[debug] [2019-05-02T16:40:42.975Z] Node Version:  v10.15.3
+[debug] [2019-05-02T16:40:42.977Z] Time:          Thu May 02 2019 12:40:42 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-05-02T16:40:42.977Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-02T16:40:42.988Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-02T16:40:42.989Z] > authorizing via signed-in user
+[debug] [2019-05-02T16:40:42.989Z] [iam] checking project awesome-places-238720 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2019-05-02T16:40:42.991Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/awesome-places-238720:testIamPermissions  
+
+[debug] [2019-05-02T16:40:43.282Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-02T16:40:43.337Z] SyntaxError: Unexpected token A in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Socket.<anonymous> (C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:30:23)
+    at Socket.emit (events.js:189:13)
+    at Socket.EventEmitter.emit (domain.js:441:20)
+    at addChunk (_stream_readable.js:284:12)
+    at readableAddChunk (_stream_readable.js:265:11)
+    at Socket.Readable.push (_stream_readable.js:220:10)
+    at Pipe.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-05-02T16:44:46.095Z] ----------------------------------------------------------------------
+[debug] [2019-05-02T16:44:46.098Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2019-05-02T16:44:46.098Z] CLI Version:   5.1.1
+[debug] [2019-05-02T16:44:46.098Z] Platform:      win32
+[debug] [2019-05-02T16:44:46.098Z] Node Version:  v10.15.3
+[debug] [2019-05-02T16:44:46.100Z] Time:          Thu May 02 2019 12:44:46 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-05-02T16:44:46.100Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-02T16:44:46.113Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-02T16:44:46.114Z] > authorizing via signed-in user
+[debug] [2019-05-02T16:44:46.114Z] [iam] checking project awesome-places-238720 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2019-05-02T16:44:46.117Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/awesome-places-238720:testIamPermissions  
+
+[debug] [2019-05-02T16:44:46.478Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-02T16:44:46.531Z] SyntaxError: Unexpected token A in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Socket.<anonymous> (C:\Users\MarkPC\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:30:23)
     at Socket.emit (events.js:189:13)
     at Socket.EventEmitter.emit (domain.js:441:20)
     at addChunk (_stream_readable.js:284:12)
